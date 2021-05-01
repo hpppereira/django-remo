@@ -1,7 +1,4 @@
-Quickstart
-==========
+# Django Website - REMO
 
-Django rodado em servidor comum
-
-python manage.py runserver
+## Rede de Modelagem e Observação Oceanografica
 
