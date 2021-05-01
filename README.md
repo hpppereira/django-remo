@@ -1,2 +1,7 @@
-# django-remo
-Django Website - REMO
+Quickstart
+==========
+
+Django rodado em servidor comum
+
+python manage.py runserver
+

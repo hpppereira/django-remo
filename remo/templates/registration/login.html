@@ -1,0 +1,61 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section style="background-color: #111c28;" id="home"> 
+        <!-- <div class="overlay overlay-bg"></div> -->
+        <div class="container">       
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+              <h1 class="text-white">
+                Login
+              </h1> 
+            </div>  
+          </div>
+        </div>
+</section>
+
+<section class="sample-text-area" style="padding: 0 0 0 0;">
+  <div class="container">
+    <div class="section-top-border">
+    {% if form.errors %}
+      <p>O nome de usuário ou senha não conferem.</p>
+      <p> Para se cadastrar no site, favor enviar um e-mail para remoweb@gmail.com com o assunto 'Cadastro de Usuário'.
+    {% endif %}
+
+<!--     {% if next %}
+      {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+      {% else %}
+        <p>Please login to see this page.</p>
+      {% endif %}
+    {% endif %}
+ -->
+
+<form method="post" action="{% url 'login' %}">
+
+{% csrf_token %}
+
+<div>
+  <td>{{ form.username.label_tag }}</td>
+  <td>{{ form.username }}</td>
+</div>
+<div>
+  <td>{{ form.password.label_tag }}</td>
+  <td>{{ form.password }}</td>
+</div>
+
+<div>
+  <input type="submit" value="login" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</div>
+</form>
+
+<!-- {# Assumes you setup the password_reset view in your URLconf #}
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+ -->
+</div>
+</div>
+
+
+{% endblock %}

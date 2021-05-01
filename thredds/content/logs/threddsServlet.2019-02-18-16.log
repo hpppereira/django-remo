@@ -1,0 +1,2 @@
+2019-02-18T16:26:39.982 +0000 [ 251283581][       6] INFO  - threddsServlet - Remote host: 189.92.218.80 - Request: "GET /thredds/catalog_remo.html HTTP/1.1"
+2019-02-18T16:26:40.010 +0000 [ 251283609][       6] INFO  - threddsServlet - Request Completed - 200 - 2022 - 29

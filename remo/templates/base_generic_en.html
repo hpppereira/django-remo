@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="zxx" class="no-js">
+
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="{% static 'img/logo_remo.png' %}">
+  <!-- Author Meta -->
+  <meta name="author" content="colorlib">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128102473-1"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-128102473-1');
+  </script>
+
+  <!-- Site Title -->
+  {% block title %}
+  <title>REMO</title>
+  {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <script type="text/javascript" src="https://www.w3.org/TR/wai-aria-practices/examples/treeview/treeview-1/js/tree.js"></script>
+    <script type="text/javascript" src="https://www.w3.org/TR/wai-aria-practices/examples/treeview/treeview-1/js/treeitem.js"></script>
+    <script type="text/javascript" src="https://www.w3.org/TR/wai-aria-practices/examples/treeview/treeview-1/js/treeitemClick.js"></script>
+
+</head>
+
+<body style="background: #f9f9ff">  
+
+  <header id="header" id="home">
+
+    <style>
+      #header.header-scrolled {
+          transition: all 0.5s;
+          background-color: rgba(4,9,30,0.4);
+      }
+    </style>
+
+    <div class="container main-menu">
+      <div class="row align-items-center justify-content-between d-flex">
+
+        <div style="margin-left: 25px;">
+          <a href="{% url 'index_en' %}"><img src="{% static 'img/logo_remo.png' %}" alt="" title="" width="125px"/></a>
+        </div>
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+
+            <li><a href="{% url 'index_en' %}">
+              <p class="{% if request.path == '/index_en/' %} active-menu {% endif %}">
+                Home
+              </p>
+            </a></li>
+
+            <li><a href="{% url 'equipe_en' %}">
+              <p class="{% if request.path == '/equipe_en/' %} active-menu {% endif %}">
+                Team
+              </p>
+            </a></li>
+
+            <li><a href="{% url 'publicacoes_en' %}">
+              <p class="{% if request.path == '/publicacoes_en/' %} active-menu {% endif %}">
+                Publications
+              </p>
+            </a></li>
+
+            <li><a href="{% url 'noticias_list_en' %}">
+              <p class="{% if request.path == '/noticias_en/' %} active-menu {% endif %}">
+                News
+              </p>
+            </a></li>
+            <li><a href="{% url 'modelagem_en' %}">
+              <p class="{% if request.path == '/modelagem_en/' %} active-menu {% endif %}">
+                Numerical Modeling
+              </p>
+            </a></li>
+
+            <li><a href="{% url 'dados_en' %}">
+              <p class="{% if request.path == '/dados_en/' %} active-menu {% endif %}">
+                Observational Data
+              </p>
+            </a></li>
+
+            <li><a href="{% url 'contatos_en' %}">
+              <p class="{% if request.path == '/contatos/' %} active-menu {% endif %}">
+                Contact
+              </p>
+            </a></li>
+
+            <li><a style="margin-right: 15%;" href="{% url 'index' %}"><img src="{% static 'img/bra.png' %}" width="35px"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer class="footer-area section-gap" style="background: #ffffff">
+    <div class="container">
+      <div class="footer-bottom row align-items-center justify-content-between">
+        <div class="footer-text align-items-center col-lg-12 col-md-12">
+
+          <a href="https://www.ufba.br/" style="margin-left: 5%; target="_blank"><img style="
+            height: 70px; width: 50px" src="{% static 'img/logo_ufba.png' %}" alt=""></a>
+
+          <a href="https://www.ufrj.br/" style="margin-left: 5%;" target="_blank"><img style="
+            height: 70px; width: 50px;" src="{% static 'img/logo_ufrj.png' %}" alt=""></a>
+
+          <a href="https://www.petrobras.com.br/" style="margin-left: 5%;" target="_blank"><img style="
+            height: 60px; width: 90px;" src="{% static 'img/logo_petrobras.png' %}" alt=""></a>
+
+          <a href="https://www.anp.gov.br/" style="margin-left: 5%;" target="_blank"><img style="
+            height: 50px; width: 130px;" src="{% static 'img/logo_anp.png' %}" alt=""></a>
+
+          <a href="https://www.mar.mil.br/" style="margin-left: 5%;" target="_blank"><img style="
+            height: 65px; width: 55px;" src="{% static 'img/logo_marinha.png' %}" alt=""></a>
+
+          <a href="https://www.godae-oceanview.org/" style="margin-left: 5%;" target="_blank"><img style="
+            height: 60px; width: 100px;" src="{% static 'img/logo_godae.jpeg' %}" alt=""></a>
+
+          <a href="https://www.cnpq.br/" style="margin-left: 5%;" target="_blank"><img style="
+            height: 60px; width: 110px;" src="{% static 'img/logo_cnpq.png' %}" alt=""></a>
+
+          <div class="footer-text align-items-center col-lg-12 col-md-12">
+            <br>
+            <a href="{% url 'admin:index' %}" target="_blank">System Access</a> / 
+            <a href="{% url 'documentos' %}" target="_blank">Document Access</a>            
+            <br>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+              <p class="">Developed by AtmosMarine</p>
+            </div>
+          </div>          
+        </div>
+      </div>            
+    </div>
+  </footer> 
+
+<script src="https://colorlib.com/preview/theme/education/js/vendor/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://colorlib.com/preview/theme/education/js/vendor/bootstrap.min.js"></script>     
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+<script src="https://colorlib.com/preview/theme/education/js/easing.min.js"></script>     
+<script src="https://colorlib.com/preview/theme/education/js/hoverIntent.js"></script>
+<script src="https://colorlib.com/preview/theme/education/js/superfish.min.js"></script>  
+<script src="https://colorlib.com/preview/theme/education/js/jquery.ajaxchimp.min.js"></script>
+<script src="https://colorlib.com/preview/theme/education/js/jquery.magnific-popup.min.js"></script>  
+<script src="https://colorlib.com/preview/theme/education/js/jquery.tabs.min.js"></script>            
+<script src="https://colorlib.com/preview/theme/education/js/jquery.nice-select.min.js"></script> 
+<script src="https://colorlib.com/preview/theme/education/js/owl.carousel.min.js"></script>                 
+<script src="https://colorlib.com/preview/theme/education/js/mail-script.js"></script>  
+<script src="https://colorlib.com/preview/theme/education/js/main.js"></script> 
+
+</body>
+</html>

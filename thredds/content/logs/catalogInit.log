@@ -1,0 +1,45 @@
+You are currently running TDS version 4.6.12 - 2018-12-11T10:06:52-0700
+Latest Available TDS Version Info:
+    latest development version = 5.0.0
+    latest stable version = 4.6.14
+
+initCatalogs(): initializing 3 root catalogs.
+
+**************************************
+Catalog init catalog.xml
+[2019-08-04T04:28:40.591Z]
+initCatalog catalog.xml -> /opt/apache-tomcat-8.5.37/content/thredds/catalog.xml
+
+-------readCatalog(): full path=/opt/apache-tomcat-8.5.37/content/thredds/catalog.xml; path=catalog.xml
+----Catalog Validation
+**Warning: Dataset (THREDDS Server Default Catalog : You must change this to fit your server!/README - Alteracoes realizadas no servidor): is not selectable and does not have nested datasets
+
+  add static catalog to hash=catalog.xml
+  catref.getXlinkHref=catalog_remo.xml
+initCatalog catalog_remo.xml -> /opt/apache-tomcat-8.5.37/content/thredds/catalog_remo.xml
+
+-------readCatalog(): full path=/opt/apache-tomcat-8.5.37/content/thredds/catalog_remo.xml; path=catalog_remo.xml
+----Catalog Validation
+*** XML parser error (71:62)= cvc-complex-type.2.4.d: Invalid content was found starting with element 'fmrcConfig'. No child element is expected at this point.
+
+ added rootPath=<remo>  for feature collection= <REMO - Rede de Modelagem e Observacao Oceanografica/TEST - Best Time Series/HYCOM>
+  add static catalog to hash=catalog_remo.xml
+  catref.getXlinkHref=catalog_pinkdot.xml
+initCatalog catalog_pinkdot.xml -> /opt/apache-tomcat-8.5.37/content/thredds/catalog_pinkdot.xml
+
+-------readCatalog(): full path=/opt/apache-tomcat-8.5.37/content/thredds/catalog_pinkdot.xml; path=catalog_pinkdot.xml
+----Catalog Validation
+
+*** ERROR Invalid InvDatasetScan <path=pinkdot; scanLocation=/root/data/pinkdot/>: CrawlableDataset for scanLocation does not exist.
+... Dropping this datasetScan [pinkdot].
+  add static catalog to hash=catalog_pinkdot.xml
+
+**************************************
+Catalog init myExtraCatalog.xml
+[2019-08-04T04:28:40.911Z]
+*** ERROR initCatalog(): Catalog [myExtraCatalog.xml] does not exist in config directory.
+
+**************************************
+Catalog init myOtherExtraCatalog.xml
+[2019-08-04T04:28:40.911Z]
+*** ERROR initCatalog(): Catalog [myOtherExtraCatalog.xml] does not exist in config directory.

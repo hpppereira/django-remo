@@ -1,0 +1,10 @@
+2019-02-13T17:19:59.454 +0000 [  79884283][       8] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/ HTTP/1.1"
+2019-02-13T17:19:59.487 +0000 [  79884316][       8] INFO  - threddsServlet - Request Completed - 302 - -1 - 33
+2019-02-13T17:19:59.654 +0000 [  79884483][       9] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/catalog.html HTTP/1.1"
+2019-02-13T17:19:59.657 +0000 [  79884486][       9] INFO  - threddsServlet - Request Completed - 200 - 2987 - 4
+2019-02-13T17:20:02.873 +0000 [  79887702][      10] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/catalog_boinha.html HTTP/1.1"
+2019-02-13T17:20:02.877 +0000 [  79887706][      10] INFO  - threddsServlet - Request Completed - 200 - 1482 - 4
+2019-02-13T17:20:04.080 +0000 [  79888909][      11] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/catalog/testAll/catalog.html HTTP/1.1"
+2019-02-13T17:20:04.104 +0000 [  79888933][      11] INFO  - threddsServlet - Request Completed - 200 - 37240 - 24
+2019-02-13T17:58:12.455 +0000 [  82177284][      12] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/catalog/testAll/catalog.html?dataset=testDatasetScan/b1_parameters.nc HTTP/1.1"
+2019-02-13T17:58:12.462 +0000 [  82177291][      12] INFO  - threddsServlet - Request Completed - 404 - -1 - 9

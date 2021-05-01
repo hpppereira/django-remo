@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section style="background-color: #111c28;" id="home"> 
+  <div class="container">       
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12" style="padding: 30px;"></div>  
+    </div>
+  </div>
+</section>
+
+<section class="course-mission-area">
+  <div class="container">				
+    <div class="row">
+      <div class="col-md-12 accordion-center">
+      <br>
+      <h3>O contato com a REMO pode ser feito por e-mail ou telefone através dos coordenadores:</h3>
+      <br>
+      {% for c in contatos %}
+      <b>{{ c.name }}</b>
+      <br>
+      E-mail: {{c.email}}<br>
+      Telefone: {{c.tel}}<br>
+      <br>
+      {% endfor %}
+      </div>
+    </div>
+  </div>  
+</section>
+
+{% endblock %}

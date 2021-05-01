@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="THREDDS Server Default Catalog : You must change this to fit your server!"
+         xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0
+           http://www.unidata.ucar.edu/schemas/thredds/InvCatalog.1.0.6.xsd">
+
+  <!-- opcao para ativar TODOS os servicos disponiveis. Para alguns servicos, eh preciso
+       antes ativa-los no arquivo threddsConfig.xml
+       O servico de NetcdfSubset soh funciona para datasets gridados no TDS 4.3. Em versoes
+       mais atuais ele tambem funciona para dados pontuais (ex: tripa de dados para uma estacao
+       meteorologica)
+       Referencia do que cada servico faz:
+       http://www.unidata.ucar.edu/software/thredds/v4.6/tds/reference/Services.html -->
+
+<dataset name="README - Alteracoes realizadas no servidor" ID="update" serviceName="none" urlPath="update">
+  <metadata inherited="false">
+    <documentation type="summary">teste.</documentation>
+    <documentation xlink:href="http://teste.com.br:8080/extras/datasets_log.txt" xlink:title="Lista de alterações realizadas no servidor"></documentation>
+    <documentation xlink:href="http://teste.com.br:8080/extras/confere_datasets.html" xlink:title="Lista de downloads operacionais"></documentation>
+  </metadata>
+</dataset>
+
+
+<!-- exemplo de criar um link para um dataset que jah existe dentro de outro dataset, util para agrupar
+     dados de interesse dentro de um mesmo dataset -->
+<!-- <dataset name="Bases para Projeto" ID="basesproj" serviceName="none" urlPath="basesproj">
+  <catalogRef xlink:title="Vento e Onda - ww3 30-year Hindcast Phase 2" xlink:href="http://teste.com.br:8080/thredds/catalog/noaa/nopp-phase2/catalog.xml" name=""/>
+</dataset> -->
+
+<catalogRef xlink:title="REMO - Rede de Modelagem e Observacao Oceanografica" xlink:href="catalog_remo.xml" name=""/>
+
+<catalogRef xlink:title="AtmosMarine - PinkDot" xlink:href="catalog_pinkdot.xml" name=""/>
+
+</catalog>

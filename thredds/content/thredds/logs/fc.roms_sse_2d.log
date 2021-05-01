@@ -1,0 +1,54 @@
+2019-02-12T13:04:30.755 +0000 INFO  - FeatureCollection added = FeatureCollectionConfig name ='roms_sse_2d' collectionName='roms_sse_2d' type='FMRC'
+  spec='/usr/local/tds/datasets/remo/roms_sse/2d/**/roms_SSE_112_2d_#yyyyMMdd#\.nc$'
+  olderThan =10 min
+  timePartition =directory
+  updateConfig =UpdateConfig{userDefined=true, recheckAfter='null', rescan='0 0/5 * * * ? *', triggerOk=true, updateType=test}
+  tdmConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=test}
+  ProtoConfig{choice=Penultimate, change='null', param='null', outerNcml='null', cacheAll=true}
+  hasInnerNcml =true
+  fmrcConfig =FmrcConfig: regularize=false datasetTypes=[Best]
+
+2019-02-12T13:04:30.756 +0000 WARN  - MFileCollectionManager parse error =  Directory /usr/local/tds/datasets/remo/roms_sse/2d does not exist 
+ 
+2019-02-12T13:04:30.756 +0000 INFO  - scheduleJob startup scan force=test for 'roms_sse_2d' at 2019-02-12T13:04:33.756+0000
+2019-02-12T13:04:30.757 +0000 INFO  - scheduleJob recurring scan for 'roms_sse_2d' cronExpr=0 0/5 * * * ? *
+2019-02-12T13:04:33.756 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:04:33.756 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:05:00.006 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:05:00.007 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:10:00.007 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:10:00.007 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:11:49.982 +0000 INFO  - FeatureCollection added = FeatureCollectionConfig name ='roms_sse_2d' collectionName='roms_sse_2d' type='FMRC'
+  spec='/usr/local/tds/datasets/remo/roms_sse/2d/**/roms_SSE_112_2d_#yyyyMMdd#\.nc$'
+  olderThan =10 min
+  timePartition =directory
+  updateConfig =UpdateConfig{userDefined=true, recheckAfter='null', rescan='0 0/5 * * * ? *', triggerOk=true, updateType=test}
+  tdmConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=test}
+  ProtoConfig{choice=Penultimate, change='null', param='null', outerNcml='null', cacheAll=true}
+  hasInnerNcml =true
+  fmrcConfig =FmrcConfig: regularize=false datasetTypes=[Best]
+
+2019-02-12T13:11:49.982 +0000 WARN  - MFileCollectionManager parse error =  Directory /usr/local/tds/datasets/remo/roms_sse/2d does not exist 
+ 
+2019-02-12T13:11:49.983 +0000 INFO  - scheduleJob startup scan force=test for 'roms_sse_2d' at 2019-02-12T13:11:52.983+0000
+2019-02-12T13:11:49.983 +0000 INFO  - scheduleJob recurring scan for 'roms_sse_2d' cronExpr=0 0/5 * * * ? *
+2019-02-12T13:11:52.984 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:11:52.984 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:15:00.009 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:15:00.009 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:20:00.006 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:20:00.006 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:25:00.005 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:25:00.005 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:30:00.005 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:30:00.005 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:35:00.003 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:35:00.003 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:40:00.004 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:40:00.004 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:45:00.006 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:45:00.006 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:50:00.004 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:50:00.004 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d
+2019-02-12T13:55:00.004 +0000 ERROR - roms_sse_2d: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/roms_sse/2d', dirName='/usr/local/tds/datasets/remo/roms_sse/2d', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=roms_SSE_112_2d_........\.nc$}}
+2019-02-12T13:55:00.004 +0000 WARN  - MFileCollectionManager: No files found for roms_sse_2d

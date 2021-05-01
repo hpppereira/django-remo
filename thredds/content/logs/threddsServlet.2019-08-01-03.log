@@ -1,0 +1,10 @@
+2019-08-01T03:23:03.676 +0000 [2281187534][       1] INFO  - threddsServlet - Remote host: 187.70.242.59 - Request: "GET /thredds/ HTTP/1.1"
+2019-08-01T03:23:05.011 +0000 [2281188869][       1] INFO  - threddsServlet - Request Completed - 302 - -1 - 1420
+2019-08-01T03:23:05.183 +0000 [2281189041][       2] INFO  - threddsServlet - Remote host: 187.70.242.59 - Request: "GET /thredds/catalog.html HTTP/1.1"
+2019-08-01T03:23:05.930 +0000 [2281189788][       2] INFO  - threddsServlet - Request Completed - 200 - 1985 - 747
+2019-08-01T03:23:06.212 +0000 [2281190070][       3] INFO  - threddsServlet - Remote host: 187.70.242.59 - Request: "GET /thredds/tdsCat.css HTTP/1.1"
+2019-08-01T03:23:06.213 +0000 [2281190071][       4] INFO  - threddsServlet - Remote host: 187.70.242.59 - Request: "GET /thredds/threddsIcon.gif HTTP/1.1"
+2019-08-01T03:23:06.376 +0000 [2281190234][       5] INFO  - threddsServlet - Remote host: 187.70.242.59 - Request: "GET /thredds/folder.gif HTTP/1.1"
+2019-08-01T03:23:06.684 +0000 [2281190542][       5] INFO  - threddsServlet - Request Completed - 200 - -1 - 308
+2019-08-01T03:23:07.284 +0000 [2281191142][       4] INFO  - threddsServlet - Request Completed - 200 - -1 - 1071
+2019-08-01T03:23:07.333 +0000 [2281191191][       3] INFO  - threddsServlet - Request Completed - 200 - -1 - 1121

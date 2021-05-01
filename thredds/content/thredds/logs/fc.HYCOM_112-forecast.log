@@ -1,0 +1,54 @@
+2019-02-12T13:04:30.741 +0000 INFO  - FeatureCollection added = FeatureCollectionConfig name ='HYCOM_112-forecast' collectionName='HYCOM_112-forecast' type='FMRC'
+  spec='/usr/local/tds/datasets/remo/hycom112forecast/**/HYCOM_MV_#yyyyMMdd#\.nc$'
+  olderThan =10 min
+  timePartition =directory
+  updateConfig =UpdateConfig{userDefined=true, recheckAfter='null', rescan='0 0/5 * * * ? *', triggerOk=true, updateType=test}
+  tdmConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=test}
+  ProtoConfig{choice=Penultimate, change='null', param='null', outerNcml='null', cacheAll=true}
+  hasInnerNcml =true
+  fmrcConfig =FmrcConfig: regularize=false datasetTypes=[Best, Files]
+
+2019-02-12T13:04:30.742 +0000 WARN  - MFileCollectionManager parse error =  Directory /usr/local/tds/datasets/remo/hycom112forecast does not exist 
+ 
+2019-02-12T13:04:30.742 +0000 INFO  - scheduleJob startup scan force=test for 'HYCOM_112-forecast' at 2019-02-12T13:04:33.742+0000
+2019-02-12T13:04:30.742 +0000 INFO  - scheduleJob recurring scan for 'HYCOM_112-forecast' cronExpr=0 0/5 * * * ? *
+2019-02-12T13:04:33.741 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:04:33.741 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:05:00.002 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:05:00.002 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:10:00.002 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:10:00.002 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:11:49.966 +0000 INFO  - FeatureCollection added = FeatureCollectionConfig name ='HYCOM_112-forecast' collectionName='HYCOM_112-forecast' type='FMRC'
+  spec='/usr/local/tds/datasets/remo/hycom112forecast/**/HYCOM_MV_#yyyyMMdd#\.nc$'
+  olderThan =10 min
+  timePartition =directory
+  updateConfig =UpdateConfig{userDefined=true, recheckAfter='null', rescan='0 0/5 * * * ? *', triggerOk=true, updateType=test}
+  tdmConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=test}
+  ProtoConfig{choice=Penultimate, change='null', param='null', outerNcml='null', cacheAll=true}
+  hasInnerNcml =true
+  fmrcConfig =FmrcConfig: regularize=false datasetTypes=[Best, Files]
+
+2019-02-12T13:11:49.967 +0000 WARN  - MFileCollectionManager parse error =  Directory /usr/local/tds/datasets/remo/hycom112forecast does not exist 
+ 
+2019-02-12T13:11:49.967 +0000 INFO  - scheduleJob startup scan force=test for 'HYCOM_112-forecast' at 2019-02-12T13:11:52.967+0000
+2019-02-12T13:11:49.968 +0000 INFO  - scheduleJob recurring scan for 'HYCOM_112-forecast' cronExpr=0 0/5 * * * ? *
+2019-02-12T13:11:52.968 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:11:52.968 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:15:00.003 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:15:00.003 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:20:00.004 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:20:00.005 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:25:00.002 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:25:00.002 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:30:00.002 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:30:00.002 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:35:00.001 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:35:00.001 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:40:00.001 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:40:00.002 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:45:00.001 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:45:00.001 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:50:00.002 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:50:00.002 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast
+2019-02-12T13:55:00.002 +0000 ERROR - HYCOM_112-forecast: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/hycom112forecast', dirName='/usr/local/tds/datasets/remo/hycom112forecast', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=HYCOM_MV_........\.nc$}}
+2019-02-12T13:55:00.002 +0000 WARN  - MFileCollectionManager: No files found for HYCOM_112-forecast

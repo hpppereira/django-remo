@@ -1,0 +1,154 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section style="background-color: #111c28;" id="home"> 
+  <div class="container">       
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12" style="padding: 30px;"></div>  
+    </div>
+  </div>
+</section>
+
+<section class="course-details-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 left-contents">
+
+        <div class="jq-tab-wrapper" id="horizontalTab">
+          
+          <div class="jq-tab-menu">
+            <div class="jq-tab-title active" data-tab="1">Periódicos</div>
+            <div class="jq-tab-title" data-tab="2">Orientações Concluídas</div>
+            <div class="jq-tab-title" data-tab="3">Livros</div>
+            <div class="jq-tab-title" data-tab="4">Congressos</div>
+          </div>
+
+          <div class="jq-tab-content-wrapper">
+
+            <div class="jq-tab-content active" data-tab="1">
+              <section class="course-mission-area pb-60">
+                <div class="container">       
+                  <div class="row">
+                    <div class="col-md-12 accordion-center">
+                      <br>
+                      <h3>Periódicos</h3>
+                      <table class="table">
+                        {% for x in artigo %}
+                        <tr>
+                          <td style="width: 5%;">{{x.ano}}</td>
+                          <td style="width: 50%;">{{x.title}}</td>
+                          <td style="width: 40%;">{{x.authors}}</td>
+                          <td style="width: 5%;"><a href="{{x.url}}" target="_blank">URL</a></td>    
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                </div>  
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="2">
+              <section class="course-mission-area pb-60">
+                <div class="container">       
+                  <div class="row">
+                    <div class="col-md-12 accordion-center">
+                      <br>
+                      <h3>Orientações Concluídas</h3>
+                      <p>*Orientador</p>
+                      <p>**Coorientador</p>
+                      <h4>Doutorado</h4>
+                      <table class="table">
+                        {% for x in doutorado %}
+                        <tr>
+                          <td style="width: 5%;">{{x.ano}}</td>
+                          <td style="width: 50%;">{{x.title}}</td>
+                          <td style="width: 40%;">{{x.authors}}</td>
+                          <td style="width: 5%;"><a href="{{x.url}}" target="_blank">URL</a></td>  
+                        </tr>
+                        {% endfor %}
+                      </table>
+                      <h4>Mestrado</h4>
+                      <table class="table">
+                        {% for x in mestrado %}
+                        <tr>
+                          <td style="width: 5%;">{{x.ano}}</td>
+                          <td style="width: 50%;">{{x.title}}</td>
+                          <td style="width: 40%;">{{x.authors}}</td>
+                          <td style="width: 5%;"><a href="{{x.url}}" target="_blank">URL</a></td>  
+                        </tr>
+                        {% endfor %}
+                      </table>
+                      <h4>Monografia</h4>
+                      <table class="table">
+                        {% for x in monografia %}
+                        <tr>
+                          <td style="width: 5%;">{{x.ano}}</td>
+                          <td style="width: 50%;">{{x.title}}</td>
+                          <td style="width: 40%;">{{x.authors}}</td>
+                          <td style="width: 5%;"><a href="{{x.url}}" target="_blank">URL</a></td>  
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </div>               
+                  </div>
+                </div>  
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="3">
+              <section class="course-mission-area pb-60">
+                <div class="container">       
+                  <div class="row">
+                    <div class="col-md-12 accordion-center">
+                      <br>
+                      <h3>Livros</h3>
+                      <table class="table">
+                        {% for x in livro %}
+                        <tr>
+                          <td style="width: 5%;">{{x.ano}}</td>
+                          <td style="width: 50%;">{{x.title}}</td>
+                          <td style="width: 40%;">{{x.authors}}</td>
+                          <td style="width: 5%;"><a href="{{x.url}}" target="_blank">URL</a></td>    
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="4">
+              <section class="course-mission-area pb-60">
+                <div class="container">       
+                  <div class="row">
+                    <div class="col-md-12 accordion-center">
+                      <br>
+                      <h3>Congressos</h3>
+                      <table class="table">
+                        {% for x in congresso %}
+                        <tr>
+                          <td style="width: 5%;">{{x.ano}}</td>
+                          <td style="width: 50%;">{{x.title}}</td>
+                          <td style="width: 40%;">{{x.authors}}</td>
+                          <td style="width: 5%;"><a href="{{x.url}}" target="_blank">URL</a></td>    
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                </div>  
+              </section>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+{% endblock %}

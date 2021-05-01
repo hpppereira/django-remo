@@ -1,0 +1,263 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section style="background-color: #111c28;" id="home"> 
+  <div class="container">       
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12" style="padding: 30px;"></div>  
+    </div>
+  </div>
+</section>
+
+<section class="course-details-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 left-contents">
+
+        <div class="jq-tab-wrapper" id="horizontalTab">
+          
+          <div class="jq-tab-menu">
+            <div class="jq-tab-title active" data-tab="1">Coordenadores</div>
+            <div class="jq-tab-title" data-tab="2">Pesquisadores</div>
+            <div class="jq-tab-title" data-tab="3">Alunos Pós-Graduação</div>
+            <div class="jq-tab-title" data-tab="4">Alunos Graduação</div>
+            <div class="jq-tab-title" data-tab="5">Técnicos</div>
+            <div class="jq-tab-title" data-tab="6">Pesquisadores Egressos</div>
+            <div class="jq-tab-title" data-tab="7">Colaboradores Externos</div>
+          </div>
+
+          <div class="jq-tab-content-wrapper">
+
+            <div class="jq-tab-content active" data-tab="1">
+              <section class="sample-text-area" style="padding: 0 0 0 0;">
+                <div class="container">
+                  <div class="section-top-border">
+                    <h3 class="mb-30">Coordenadores</h3>
+                    <div class="progress-table-wrap">
+                      <div class="progress-table">
+                        <div class="table-head">
+                          <div class="serial" style="width: 50%;">
+                            Nome
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                            Email
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                          Instituição
+                          </div>
+                        </div>
+                        {% for x in lista_coor %}
+                        <div class="table-row">
+                          <div class="serial" style="width: 50%;"><a href="{{ x.lattes }}" target="_blank">{{ x.name }}</a></div>
+                          <div class="serial" style="width: 50%;">{{ x.email }}</div>
+                          <div class="serial" style="width: 50%;">{{ x.institution }}</div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="2">
+              <section class="sample-text-area" style="padding: 0 0 0 0;">
+                <div class="container">
+                  <div class="section-top-border">
+                    <h3 class="mb-30">Pesquisadores</h3>
+                    <div class="progress-table-wrap">
+                      <div class="progress-table">
+                        <div class="table-head">
+                          <div class="serial" style="width: 50%;">
+                            Nome
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                            Email
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                          Instituição
+                          </div>
+                        </div>
+                        {% for x in lista_pesq %}
+                        <div class="table-row">
+                          <div class="serial" style="width: 50%;"><a href="{{ x.lattes }}" target="_blank">{{ x.name }}</a></div>
+                          <div class="serial" style="width: 50%;">{{ x.email }}</div>
+                          <div class="serial" style="width: 50%;">{{ x.institution }}</div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="3">
+              <section class="sample-text-area" style="padding: 0 0 0 0;">
+                <div class="container">
+                  <div class="section-top-border">
+                    <h3 class="mb-30">Alunos Pós-Graduação</h3>
+                    <div class="progress-table-wrap">
+                      <div class="progress-table">
+                        <div class="table-head">
+                          <div class="serial" style="width: 50%;">
+                            Nome
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                            Email
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                          Instituição
+                          </div>
+                        </div>
+                        {% for x in lista_alun_pos %}
+                        <div class="table-row">
+                          <div class="serial" style="width: 50%;"><a href="{{ x.lattes }}" target="_blank">{{ x.name }}</a></div>
+                          <div class="serial" style="width: 50%;">{{ x.email }}</div>
+                          <div class="serial" style="width: 50%;">{{ x.institution }}</div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="4">
+              <section class="sample-text-area" style="padding: 0 0 0 0;">
+                <div class="container">
+                  <div class="section-top-border">
+                    <h3 class="mb-30">Alunos Graduação</h3>
+                    <div class="progress-table-wrap">
+                      <div class="progress-table">
+                        <div class="table-head">
+                          <div class="serial" style="width: 50%;">
+                            Nome
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                            Email
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                          Instituição
+                          </div>
+                        </div>
+                        {% for x in lista_alun_gra %}
+                        <div class="table-row">
+                          <div class="serial" style="width: 50%;"><a href="{{ x.lattes }}" target="_blank">{{ x.name }}</a></div>
+                          <div class="serial" style="width: 50%;">{{ x.email }}</div>
+                          <div class="serial" style="width: 50%;">{{ x.institution }}</div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="5">
+              <section class="sample-text-area" style="padding: 0 0 0 0;">
+                <div class="container">
+                  <div class="section-top-border">
+                    <h3 class="mb-30">Técnicos</h3>
+                    <div class="progress-table-wrap">
+                      <div class="progress-table">
+                        <div class="table-head">
+                          <div class="serial" style="width: 50%;">
+                            Nome
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                            Email
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                          Instituição
+                          </div>
+                        </div>
+                        {% for x in lista_tecn %}
+                        <div class="table-row">
+                          <div class="serial" style="width: 50%;"><a href="{{ x.lattes }}" target="_blank">{{ x.name }}</a></div>
+                          <div class="serial" style="width: 50%;">{{ x.email }}</div>
+                          <div class="serial" style="width: 50%;">{{ x.institution }}</div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="6">
+              <section class="sample-text-area" style="padding: 0 0 0 0;">
+                <div class="container">
+                  <div class="section-top-border">
+                    <h3 class="mb-30">Pesquisadores Egressos</h3>
+                    <div class="progress-table-wrap">
+                      <div class="progress-table">
+                        <div class="table-head">
+                          <div class="serial" style="width: 50%;">
+                            Nome
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                            Email
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                          Instituição
+                          </div>
+                        </div>
+                        {% for x in lista_pesq_eg %}
+                        <div class="table-row">
+                          <div class="serial" style="width: 50%;"><a href="{{ x.lattes }}" target="_blank">{{ x.name }}</a></div>
+                          <div class="serial" style="width: 50%;">{{ x.email }}</div>
+                          <div class="serial" style="width: 50%;">{{ x.institution }}</div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="jq-tab-content" data-tab="7">
+              <section class="sample-text-area" style="padding: 0 0 0 0;">
+                <div class="container">
+                  <div class="section-top-border">
+                    <h3 class="mb-30">Colaboradores Externos</h3>
+                    <div class="progress-table-wrap">
+                      <div class="progress-table">
+                        <div class="table-head">
+                          <div class="serial" style="width: 50%;">
+                            Nome
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                            Email
+                          </div>
+                          <div class="serial" style="width: 50%;">
+                          Instituição
+                          </div>
+                        </div>
+                        {% for x in lista_colab_ext %}
+                        <div class="table-row">
+                          <div class="serial" style="width: 50%;"><a href="{{ x.lattes }}" target="_blank">{{ x.name }}</a></div>
+                          <div class="serial" style="width: 50%;">{{ x.email }}</div>
+                          <div class="serial" style="width: 50%;">{{ x.institution }}</div>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+{% endblock %}

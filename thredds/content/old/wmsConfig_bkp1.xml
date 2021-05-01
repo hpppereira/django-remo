@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wmsConfig SYSTEM "/opt/tds/apache-tomcat-8.5.11/content/thredds/wmsConfig.dtd">
+<!--
+<!DOCTYPE wmsConfig SYSTEM "http://www.unidata.ucar.edu/schemas/thredds/dtd/ncwms/wmsConfig.dtd"> -->
+<!--
+Detailed configuration of the WMS service.  This config file can be used to
+set default styling parameters for each dataset/variable, and to enable or disable
+the GetFeatureInfo operation.
+
+See http://www.resc.reading.ac.uk/trac/myocean-tools/wiki/WmsDetailedConfiguration
+for more information.
+-->
+<wmsConfig>
+    <global>
+        <!-- These settings apply to all datasets unless overridden below -->
+
+        <defaults>
+            <!-- The global defaults. All elements are mandatory -->
+            <allowFeatureInfo>true</allowFeatureInfo>
+            <defaultColorScaleRange>-50 50</defaultColorScaleRange>
+            <defaultPaletteName>rainbow</defaultPaletteName>
+            <defaultNumColorBands>100</defaultNumColorBands>
+            <logScaling>false</logScaling>
+            <intervalTime>false</intervalTime>
+        </defaults>
+
+        <standardNames>
+            <!-- Use this section to set defaults per standard name -->
+            <!-- Units must come from the UDUNITS vocabulary -->
+            <standardName name="sea_water_potential_temperature" units="K">
+                <defaultColorScaleRange>268 308</defaultColorScaleRange>
+            </standardName>
+            <standardName name="sea_water_temperature" units="K">
+                <defaultColorScaleRange>268 308</defaultColorScaleRange>
+            </standardName>
+            <standardName name="sea_surface_temperature" units="K">
+                <defaultColorScaleRange>268 308</defaultColorScaleRange>
+            </standardName>
+            <standardName name="mass_concentration_of_chlorophyll_in_sea_water" units="kg m-3">
+                <logScaling>true</logScaling>
+            </standardName>
+
+            <!--Velocidade absoluta-->
+            <standardName name="sea_water_velocity" units="m/s">
+                <defaultColorScaleRange>0 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_bottom</defaultPaletteName>
+            </standardName>          
+            <standardName name="surface_geostrophic_sea_water_velocity" units="m/s">
+                <defaultColorScaleRange>0 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_bottom</defaultPaletteName>
+            </standardName>                                                      
+            <standardName name="surface_geostrophic_sea_water_velocity_assuming_sea_level_for_geoid" units="m/s">
+                <defaultColorScaleRange>0 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_bottom</defaultPaletteName>
+            </standardName>
+
+            <!--Componente de velocidade-->
+            <standardName name="eastward_sea_water_velocity" units="m/s">
+                <defaultColorScaleRange>-1.5 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_centered</defaultPaletteName>
+            </standardName>
+            <standardName name="northward_sea_water_velocity" units="m/s">
+                <defaultColorScaleRange>-1.5 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_centered</defaultPaletteName>
+            </standardName>
+            <standardName name="surface_eastward_geostrophic_sea_water_velocity" units="m/s">
+                <defaultColorScaleRange>-1.5 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_centered</defaultPaletteName>
+            </standardName>
+            <standardName name="surface_northward_geostrophic_sea_water_velocity" units="m/s">
+                <defaultColorScaleRange>-1.5 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_centered</defaultPaletteName>
+            </standardName>
+            <standardName name="surface_eastward_geostrophic_sea_water_velocity_assuming_sea_level_for_geoid" units="m/s">
+                <defaultColorScaleRange>-1.5 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_centered</defaultPaletteName>
+            </standardName>
+            <standardName name="surface_northward_geostrophic_sea_water_velocity_assuming_sea_level_for_geoid" units="m/s">
+                <defaultColorScaleRange>-1.5 1.5</defaultColorScaleRange>
+                <defaultPaletteName>light_centered</defaultPaletteName>
+            </standardName>
+
+            <!--Elevacao do terreno-->
+            <standardName name="topography" units="meters">
+              <defaultColorScaleRange>-8000 8000</defaultColorScaleRange>
+              <defaultPaletteName>gmt_relief</defaultPaletteName>
+            </standardName>           
+            <standardName name="bathymetry" units="meters">
+              <defaultColorScaleRange>0 8000</defaultColorScaleRange>
+              <defaultPaletteName>gmt_ocean</defaultPaletteName>
+            </standardName>             
+
+            <!-- TODO: how about allowing "*fraction" to map to 0:1? -->
+            <!-- TODO: how about allowing multiple standard names to map to the same settings,
+                 either through a glob expression or through a list? -->
+        </standardNames>
+    </global>
+
+    <overrides>
+        
+        <datasetPath pathSpec="testAll/*eta_211.nc">
+            <!-- Will apply to all paths that match the path spec above -->
+            <pathDefaults>
+                <!-- These will apply to all variables in this path unless overridden below -->
+                <allowFeatureInfo>false</allowFeatureInfo>
+                <defaultPaletteName>occam</defaultPaletteName>
+            </pathDefaults>
+
+            <variables>
+                <!-- Configure variables individually according to their internal ID.
+                     This is the most specific setting and will override any others -->
+                <variable id="Z_sfc">
+                    <defaultColorScaleRange>10 20</defaultColorScaleRange>
+                </variable>
+            </variables>
+        </datasetPath>
+        
+    </overrides>
+
+</wmsConfig>
+

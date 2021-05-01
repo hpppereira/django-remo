@@ -1,0 +1,106 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<section class="banner-area relative" id="home" style="background: url({% static 'img/capa.jpg' %});background-size: cover;">
+  <div class="overlay overlay-bg" style="background-color: rgba(4,9,30,0.5)"></div>
+  <div class="container">
+    <div class="row fullscreen d-flex align-items-center justify-content-between">
+      <div class="banner-content col-lg-9 col-md-12">
+        <h1 class="text-uppercase">REMO</h1>
+        <h3 style="color: #ffffff">Uma iniciativa brasileira em oceanografia operacional</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-area">
+  <div class="container">
+    <div class="row">
+      {% for inform in index_informs %}
+        <div class="col-lg-4">
+          <div class="single-feature">
+            <div class="title">
+              <h4>{{inform.title_pt}}</h4>
+            </div>
+            <div class="desc-wrap">
+              <p>
+              {{inform.text_pt}} 
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="popular-course-area section-gap" style="padding: 25px;">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Últimas notícias</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for x in noticias_f|slice:":3" %}
+        <div class="col-lg-4 col-md-6 single-blog">
+          <div class="single-popular-carusel">
+            <div class="thumb-wrap relative">
+              {% if x.image %}
+                <div class="thumb relative">
+                  <a href="{% url 'noticias_detail' pk=x.id%}">
+                  <img class="img-index" src="{{ x.image.url }}" alt="">
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+            <div class="details">
+              <a href="{% url 'noticias_detail' pk=x.id%}">
+              <h4 align="center">{{ x.title_pt }}</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="popular-course-area section-gap" style="padding: 25px;">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">Destaques</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for x in dest|slice:":3" %}
+        <div class="col-lg-4 col-md-6 single-blog">
+          <div class="thumb-wrap relative">
+            {% if x.image %}
+              <div class="thumb relative">
+                <a href="{{ x.url }}">
+                <img class="img-index" src="{{ x.image.url }}" alt="">
+                </a>
+              </div>
+            {% endif %}
+          </div>
+          <div class="details">
+            <a href="{{ x.url }}">
+            <h4 align="center">{{ x.title_pt }}</h4>
+            </a>            
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

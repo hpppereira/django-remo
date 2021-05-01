@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+   name="Unidata THREDDS-IDD NetCDF-OpenDAP Server" version="1.0.1">
+  
+  <service name="latest" serviceType="Resolver" base="" />
+  <service name="both" serviceType="Compound" base="">
+    <service name="ncdods" serviceType="OPENDAP" base="/thredds/dodsC/" />
+    <service name="HTTPServer" serviceType="HTTPServer" base="/thredds/fileServer/" />
+  </service>
+  <service name="all" base="" serviceType="compound">
+    <service name="odap" serviceType="OpenDAP" base="/thredds/dodsC/" />
+    <service name="dap4" serviceType="DAP4" base="/thredds/dap4/" />
+    <service name="http" serviceType="HTTPServer" base="/thredds/fileServer/" />
+    <service name="wcs" serviceType="WCS" base="/thredds/wcs/" />
+    <service name="wms" serviceType="WMS" base="/thredds/wms/" />
+    <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/" />
+  </service>
+
+
+  <datasetScan name="HYCOM" ID="1"
+               path="remo" location="/mnt/storage/netcdf/thredds/">
+
+    <metadata inherited="true">
+      <serviceName>all</serviceName>
+      <dataType>Grid</dataType>
+    </metadata>
+
+    <filter>
+      <include wildcard="*.nc"/>
+    </filter>
+  </datasetScan>
+
+</catalog>

@@ -1,0 +1,12 @@
+2019-03-15T18:02:54.248 +0000 [  72235844][       1] INFO  - threddsServlet - Remote host: 179.34.22.0 - Request: "GET /thredds/catalog_remo.html HTTP/1.1"
+2019-03-15T18:02:54.818 +0000 [  72236414][       1] INFO  - threddsServlet - Request Completed - 200 - 2022 - 574
+2019-03-15T18:02:55.191 +0000 [  72236787][       2] INFO  - threddsServlet - Remote host: 179.34.22.0 - Request: "GET /thredds/tdsCat.css HTTP/1.1"
+2019-03-15T18:02:55.194 +0000 [  72236790][       4] INFO  - threddsServlet - Remote host: 179.34.22.0 - Request: "GET /thredds/folder.gif HTTP/1.1"
+2019-03-15T18:02:55.193 +0000 [  72236789][       3] INFO  - threddsServlet - Remote host: 179.34.22.0 - Request: "GET /thredds/threddsIcon.gif HTTP/1.1"
+2019-03-15T18:02:55.244 +0000 [  72236840][       4] INFO  - threddsServlet - Request Completed - 200 - -1 - 50
+2019-03-15T18:02:55.254 +0000 [  72236850][       2] INFO  - threddsServlet - Request Completed - 200 - -1 - 63
+2019-03-15T18:02:55.257 +0000 [  72236853][       3] INFO  - threddsServlet - Request Completed - 200 - -1 - 64
+2019-03-15T18:11:40.312 +0000 [  72761908][       5] INFO  - threddsServlet - Remote host: 179.34.22.0 - Request: "GET /thredds/catalog_remo.html HTTP/1.1"
+2019-03-15T18:11:40.317 +0000 [  72761913][       5] INFO  - threddsServlet - Request Completed - 200 - 2022 - 5
+2019-03-15T18:12:09.167 +0000 [  72790763][       6] INFO  - threddsServlet - Remote host: 179.34.22.0 - Request: "GET /thredds/catalog_remo.html HTTP/1.1"
+2019-03-15T18:12:09.172 +0000 [  72790768][       6] INFO  - threddsServlet - Request Completed - 200 - 2022 - 5

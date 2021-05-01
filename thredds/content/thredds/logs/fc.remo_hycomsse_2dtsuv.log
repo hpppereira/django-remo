@@ -1,0 +1,52 @@
+2019-02-12T13:04:30.761 +0000 INFO  - FeatureCollection added = FeatureCollectionConfig name ='remo_hycomsse_2dtsuv' collectionName='remo_hycomsse_2dtsuv' type='FMRC'
+  spec='/usr/local/tds/datasets/remo/base_hycom_sse/2D/**/archv.*\_2Dtsuv_nc4.nc$'
+  timePartition =directory
+  updateConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=nocheck}
+  tdmConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=test}
+  ProtoConfig{choice=Penultimate, change='null', param='null', outerNcml='null', cacheAll=true}
+  hasInnerNcml =false
+  fmrcConfig =FmrcConfig: regularize=true datasetTypes=[Best]
+
+2019-02-12T13:04:30.762 +0000 WARN  - MFileCollectionManager parse error =  Directory /usr/local/tds/datasets/remo/base_hycom_sse/2D does not exist 
+ 
+2019-02-12T13:04:30.762 +0000 INFO  - scheduleJob startup scan force=nocheck for 'remo_hycomsse_2dtsuv' at 2019-02-12T13:04:33.762+0000
+2019-02-12T13:04:33.763 +0000 ERROR - remo_hycomsse_2dtsuv: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/base_hycom_sse/2D', dirName='/usr/local/tds/datasets/remo/base_hycom_sse/2D', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=archv.*\_2Dtsuv_nc4.nc$}}
+2019-02-12T13:04:33.765 +0000 WARN  - MFileCollectionManager: No files found for remo_hycomsse_2dtsuv
+2019-02-12T13:04:33.781 +0000 ERROR - UpdateCollectionJob.execute startup failed collection=remo_hycomsse_2dtsuv
+java.lang.NullPointerException: null
+	at ucar.nc2.ft.fmrc.FmrcDataset.getNetcdfDataset2D(FmrcDataset.java:182) ~[cdm-4.6.12.jar:4.6.12]
+	at ucar.nc2.ft.fmrc.Fmrc.getDataset2D(Fmrc.java:187) ~[cdm-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFcFmrc.updateCollection(InvDatasetFcFmrc.java:114) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFeatureCollection.checkState(InvDatasetFeatureCollection.java:311) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFeatureCollection.update(InvDatasetFeatureCollection.java:332) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFcFmrc.update(InvDatasetFcFmrc.java:95) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFeatureCollection.sendEvent(InvDatasetFeatureCollection.java:228) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.inventory.CollectionUpdater$UpdateCollectionJob.execute(CollectionUpdater.java:242) [cdm-4.6.12.jar:4.6.12]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:207) [quartz-2.2.0.jar:?]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:560) [quartz-2.2.0.jar:?]
+2019-02-12T13:11:49.989 +0000 INFO  - FeatureCollection added = FeatureCollectionConfig name ='remo_hycomsse_2dtsuv' collectionName='remo_hycomsse_2dtsuv' type='FMRC'
+  spec='/usr/local/tds/datasets/remo/base_hycom_sse/2D/**/archv.*\_2Dtsuv_nc4.nc$'
+  timePartition =directory
+  updateConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=nocheck}
+  tdmConfig =UpdateConfig{userDefined=false, recheckAfter='null', rescan='null', triggerOk=true, updateType=test}
+  ProtoConfig{choice=Penultimate, change='null', param='null', outerNcml='null', cacheAll=true}
+  hasInnerNcml =false
+  fmrcConfig =FmrcConfig: regularize=true datasetTypes=[Best]
+
+2019-02-12T13:11:49.990 +0000 WARN  - MFileCollectionManager parse error =  Directory /usr/local/tds/datasets/remo/base_hycom_sse/2D does not exist 
+ 
+2019-02-12T13:11:49.990 +0000 INFO  - scheduleJob startup scan force=nocheck for 'remo_hycomsse_2dtsuv' at 2019-02-12T13:11:52.990+0000
+2019-02-12T13:11:52.993 +0000 ERROR - remo_hycomsse_2dtsuv: Invalid collection= MCollection{name='/usr/local/tds/datasets/remo/base_hycom_sse/2D', dirName='/usr/local/tds/datasets/remo/base_hycom_sse/2D', wantSubdirs=true, filter=WildcardMatchOnPath{wildcard=null regexp=archv.*\_2Dtsuv_nc4.nc$}}
+2019-02-12T13:11:52.994 +0000 WARN  - MFileCollectionManager: No files found for remo_hycomsse_2dtsuv
+2019-02-12T13:11:53.013 +0000 ERROR - UpdateCollectionJob.execute startup failed collection=remo_hycomsse_2dtsuv
+java.lang.NullPointerException: null
+	at ucar.nc2.ft.fmrc.FmrcDataset.getNetcdfDataset2D(FmrcDataset.java:182) ~[cdm-4.6.12.jar:4.6.12]
+	at ucar.nc2.ft.fmrc.Fmrc.getDataset2D(Fmrc.java:187) ~[cdm-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFcFmrc.updateCollection(InvDatasetFcFmrc.java:114) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFeatureCollection.checkState(InvDatasetFeatureCollection.java:311) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFeatureCollection.update(InvDatasetFeatureCollection.java:332) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFcFmrc.update(InvDatasetFcFmrc.java:95) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.catalog.InvDatasetFeatureCollection.sendEvent(InvDatasetFeatureCollection.java:228) ~[tdcommon-4.6.12.jar:4.6.12]
+	at thredds.inventory.CollectionUpdater$UpdateCollectionJob.execute(CollectionUpdater.java:242) [cdm-4.6.12.jar:4.6.12]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:207) [quartz-2.2.0.jar:?]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:560) [quartz-2.2.0.jar:?]

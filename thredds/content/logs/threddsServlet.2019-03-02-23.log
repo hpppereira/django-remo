@@ -1,0 +1,8 @@
+2019-03-02T23:30:04.670 +0000 [1313488269][    1674] INFO  - threddsServlet - Remote host: 181.214.224.242 - Request: "GET /thredds/dodsC/pinkdot/b1_parameters.nc.dds HTTP/1.1"
+2019-03-02T23:30:04.681 +0000 [1313488280][    1674] INFO  - threddsServlet - Request Completed - 200 - -1 - 11
+2019-03-02T23:30:04.682 +0000 [1313488281][    1675] INFO  - threddsServlet - Remote host: 181.214.224.242 - Request: "GET /thredds/dodsC/pinkdot/b1_parameters.nc.das HTTP/1.1"
+2019-03-02T23:30:04.684 +0000 [1313488283][    1675] INFO  - threddsServlet - Request Completed - 200 - -1 - 2
+2019-03-02T23:30:04.685 +0000 [1313488284][    1676] INFO  - threddsServlet - Remote host: 181.214.224.242 - Request: "GET /thredds/dodsC/pinkdot/b1_parameters.nc.dds HTTP/1.1"
+2019-03-02T23:30:04.685 +0000 [1313488284][    1676] INFO  - threddsServlet - Request Completed - 200 - -1 - 0
+2019-03-02T23:30:04.739 +0000 [1313488338][    1677] INFO  - threddsServlet - Remote host: 181.214.224.242 - Request: "GET /thredds/dodsC/pinkdot/b1_parameters.nc.dods?time,lat,lon,hm0,tp,dp,hs,hmax,tza,thmax,t1,t2,t3 HTTP/1.1"
+2019-03-02T23:30:04.741 +0000 [1313488340][    1677] INFO  - threddsServlet - Request Completed - 200 - -1 - 2

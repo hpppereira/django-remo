@@ -1,0 +1,81 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!-- linka funcoes do leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+
+<style type="text/css">
+.section-gap { padding: 50px;}
+</style>
+
+<style>
+.about-banner {
+    background: none;
+    background-size: cover;
+}
+.banner-area {
+    background: none;
+    background-size: cover; 
+}
+</style>
+
+<section style="background-color: #111c28;" id="home"> 
+  <div class="container">       
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12" style="padding: 30px;"></div>  
+    </div>
+  </div>
+</section>
+
+<section class="post-content-area" style="padding: 20px">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 left-contents">
+        <h5><b>Boias Meteo-Oceanográficas</b></h5>
+        <br>
+        <div id="mapid" style="width: 100%; height: 500px;"></div>
+          <script>
+            var mymap = L.map('mapid').setView([-23.1910386,-43.1151074], 8);
+                        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                        maxZoom: 18,
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                                     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                                     'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        id: 'mapbox.streets'
+                        }).addTo(mymap);
+                        {% for x in lista_esta %}
+                        L.marker([{{ x.lat }}, {{ x.lon }}]).addTo(mymap)
+                         .bindPopup("<b>{{ x.nome }}</b><br/><p>Campanha<br>Período:{{ x.data_i }} - {{ x.data_f }}<br>Download de dados: <a href={% url 'index' %}media/{{ x.dados }} target=_blank>Download</a><br><a href={% url 'dados_grafic' x.id_serie%} target=_self>Gráficos {{ x.nome }}</a></p>");               
+                        {% endfor %}
+            var popup = L.popup();
+          </script>
+          <br>
+          <table class="table">
+            <tr>
+              <th>Estação</th>
+              <th>Localização</th>
+              <th>Profundidade</th>
+              <th>Período</th>
+              <th>Gráficos</th>
+              <th>Tabela</th>
+            </tr>
+            {% for x in lista_esta %}
+              <tr>
+                <td>{{x.nome}}</td>
+                <td>{{ x.lat }},{{ x.lon }}</td>
+                <td>{{ x.prof }}</td>
+                <td>{{ x.data_i }} - {{ x.data_f }}</td>
+                <td><a href="{% url 'dados_grafic' x.id_serie%}" target="_blank">Acesso</a></td>
+                <td><a href="{% url 'index' %}media/{{ x.dados }}" target="_blank">Download</a></td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}

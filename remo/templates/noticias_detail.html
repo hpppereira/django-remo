@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<section style="background-color: #111c28;" id="home"> 
+  <div class="container">       
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12" style="padding: 30px;"></div>  
+    </div>
+  </div>
+</section>
+
+<section class="post-content-area single-post-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 posts-list">
+                <div class="single-post row">
+                        <div class="col-lg-3"></div>
+                    <div class="col-lg-6">
+                        <div class="col-lg-12">
+                            <h3>{{ post.title_pt }}</h3>
+                        <br>
+                        </div>
+                        <div class="feature-img">
+                            {% if post.image.url != None %}
+                                <p>{{ post.published_date }}</p>
+                                <img class="img-fluid" src="{{ post.image.url }}" alt="">
+                            {% endif %}
+                        </div>
+                        <br>
+                        <div class="col-lg-12">
+                            {{ post.text_pt }}
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+
+{% endblock %}

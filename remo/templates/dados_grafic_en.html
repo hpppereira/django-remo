@@ -1,0 +1,377 @@
+{% extends "base_generic_en.html" %}
+
+{% block content %}
+
+<section style="background-color: #111c28;" id="home"> 
+  <div class="container">       
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="about-content col-lg-12" style="padding: 30px;"></div>  
+    </div>
+  </div>
+</section>
+
+<section class="top-category-widget-area"></section>
+
+<!-- highstock -->
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<!-- work with csv - highcharts -->
+<script src="http://code.highcharts.com/modules/data.js"></script>
+
+<!-- maps -->
+<script src="http://code.highcharts.com/maps/modules/map.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/br/br-all.js"></script>
+
+<section class="post-content-area" style="padding: 20px">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 left-contents">
+<div class="jq-tab-wrapper horizontal-tab" id="horizontalTab">
+<div class="jq-tab-menu">
+<div class="jq-tab-title active" data-tab="1">Wind</div>
+<div class="jq-tab-title" data-tab="2">Temperature (Air e SST)</div>
+<div class="jq-tab-title" data-tab="3">Atmopheric Pressure and Relative Humidity</div>
+<div class="jq-tab-title" data-tab="4">Wave (Hs e Tp)</div>
+<div class="jq-tab-title" data-tab="5">Current (Intensity and Direction)</div>
+<div class="jq-tab-title" data-tab="6">Thermistor String</div>
+</div>
+<div class="jq-tab-content-wrapper">
+<div class="jq-tab-content active" data-tab="1">
+<div id="graphFixed1" style="min-width: 100%; height: 100%; margin: 0 auto">
+</div>
+
+<script>
+
+Highcharts.stockChart('graphFixed1', {
+  chart: {
+    zoomType: 'xy'},
+    title: {
+      text: 'Wind'},
+      yAxis: [{
+        title: {text: 'Intensity (m/s)',
+                style: {color: Highcharts.getOptions().colors[1]}
+               },
+        labels: {format: '{value} m/s',
+                 style: {color: Highcharts.getOptions().colors[1]}
+                },
+      opposite: false},{
+        title: {text: 'Direction (º)',
+                style: {color: Highcharts.getOptions().colors[0]}
+               },
+        labels: {format: '{value} º',
+                 style: {color: Highcharts.getOptions().colors[0]}
+                 }
+               }],
+  series : [{name : 'Direction',
+            data: [{% for data in lista_csv %}
+                  [{{ data.data }},{{ data.wd }}]
+                   {% if not forloop.last %}, {% endif %}
+                   {% endfor %}],
+            yAxis: 1,
+            type: 'spline',
+            tooltip: {valueDecimals: 2,
+            valueSuffix: ' º'}},{
+            name : 'Intensity',
+            data: [ {% for data in lista_csv %}
+                  [{{ data.data }},{{ data.ws }}]
+                  {% if not forloop.last %}, {% endif %}
+                  {% endfor %}],
+          type: 'spline',
+          tooltip: {
+          valueDecimals: 2,
+          valueSuffix: 'm/s'}}]});
+
+</script>
+</div>
+<div class="jq-tab-content" data-tab="2">
+<div id="graphFixed2" style="min-width: 100%; height: 100%; margin: 0 auto">
+</div>
+
+<script>
+
+Highcharts.stockChart('graphFixed2', {
+  chart: {
+    zoomType: 'xy'},
+    title: {
+      text: 'Air and Water Temperature'},
+      yAxis: [{
+        title: {text: 'Air Temperature (ºC)',
+                style: {color: Highcharts.getOptions().colors[1]}
+               },
+        labels: {format: '{value} ºC',
+                 style: {color: Highcharts.getOptions().colors[1]}
+                },
+      opposite: false},{
+        title: {text: 'Water Temperature (ºC)',
+                style: {color: Highcharts.getOptions().colors[0]}
+               },
+        labels: {format: '{value} ºC',
+                 style: {color: Highcharts.getOptions().colors[0]}
+                 }
+               }],
+  series : [{name : 'Water',
+            data: [{% for data in lista_csv %}
+                  [{{ data.data }},{{ data.tsup }}]
+                   {% if not forloop.last %}, {% endif %}
+                   {% endfor %}],
+            yAxis: 1,
+            type: 'spline',
+            tooltip: {valueDecimals: 2,
+            valueSuffix: ' ºC'}},{
+            name : 'Air',
+            data: [ {% for data in lista_csv %}
+                  [{{ data.data }},{{ data.ate }}]
+                  {% if not forloop.last %}, {% endif %}
+                  {% endfor %}],
+          type: 'spline',
+          tooltip: {
+          valueDecimals: 2,
+          valueSuffix: 'ºC'}}]});
+
+</script>
+</div>
+</div>
+<div class="jq-tab-content" data-tab="3">
+<div id="graphFixed3">
+</div>
+
+<script>
+
+Highcharts.stockChart('graphFixed3', {
+  chart: {
+    zoomType: 'xy'},
+    title: {
+      text: 'Atmopheric Pressure and Relative Humidity'},
+      yAxis: [{
+        title: {text: 'Atmopheric Pressure (hPa)',
+                style: {color: Highcharts.getOptions().colors[1]}
+               },
+        labels: {format: '{value} hPa',
+                 style: {color: Highcharts.getOptions().colors[1]}
+                },
+      opposite: false},{
+        title: {text: 'Relative Humidity (%)',
+                style: {color: Highcharts.getOptions().colors[0]}
+               },
+        labels: {format: '{value} %',
+                 style: {color: Highcharts.getOptions().colors[0]}
+                 }
+               }],
+  series : [{name : 'Humidity',
+            data: [{% for data in lista_csv %}
+                  [{{ data.data }},{{ data.rh }}]
+                   {% if not forloop.last %}, {% endif %}
+                   {% endfor %}],
+            yAxis: 1,
+            type: 'spline',
+            tooltip: {valueDecimals: 2,
+            valueSuffix: ' %'}},{
+            name : 'Pressure',
+            data: [ {% for data in lista_csv %}
+                  [{{ data.data }},{{ data.bp }}]
+                  {% if not forloop.last %}, {% endif %}
+                  {% endfor %}],
+          type: 'spline',
+          tooltip: {
+          valueDecimals: 2,
+          valueSuffix: 'hPa'}}]});
+
+</script>
+</div>
+<div class="jq-tab-content" data-tab="4">
+<div id="graphFixed4">
+</div>
+
+<script>
+
+Highcharts.stockChart('graphFixed4', {
+  chart: {
+    zoomType: 'xy'},
+    title: {
+      text: 'Significant Wave Height and Peak Period'},
+      yAxis: [{
+        title: {text: 'Significant Wave Height (m)',
+                style: {color: Highcharts.getOptions().colors[1]}
+               },
+        labels: {format: '{value} m',
+                 style: {color: Highcharts.getOptions().colors[1]}
+                },
+      opposite: false},{
+        title: {text: 'Peak Period (s)',
+                style: {color: Highcharts.getOptions().colors[0]}
+               },
+        labels: {format: '{value} s',
+                 style: {color: Highcharts.getOptions().colors[0]}
+                 }
+               }],
+  series : [{name : 'Tp',
+            data: [{% for data in lista_csv %}
+                  [{{ data.data }},{{ data.tp }}]
+                   {% if not forloop.last %}, {% endif %}
+                   {% endfor %}],
+            yAxis: 1,
+            type: 'spline',
+            tooltip: {valueDecimals: 2,
+            valueSuffix: ' s'}},{
+            name : 'Hs',
+            data: [ {% for data in lista_csv %}
+                  [{{ data.data }},{{ data.hs }}]
+                  {% if not forloop.last %}, {% endif %}
+                  {% endfor %}],
+          type: 'spline',
+          tooltip: {
+          valueDecimals: 2,
+          valueSuffix: 'm'}}]});
+
+</script>
+</div>
+<div class="jq-tab-content" data-tab="5">
+<div id="graphFixed5">
+</div>
+
+<script>
+
+Highcharts.stockChart('graphFixed5', {
+  chart: {
+    zoomType: 'xy'},
+    title: {
+      text: 'Current Intensity and Direction'},
+      yAxis: [{
+        title: {text: 'Intensity  (mm/s)',
+                style: {color: Highcharts.getOptions().colors[1]}
+               },
+        labels: {format: '{value} mm/s',
+                 style: {color: Highcharts.getOptions().colors[1]}
+                },
+      opposite: false},{
+        title: {text: 'Direction (º)',
+                style: {color: Highcharts.getOptions().colors[0]}
+               },
+        labels: {format: '{value} º',
+                 style: {color: Highcharts.getOptions().colors[0]}
+                 }
+               }],
+  series : [{name : 'Direction',
+            data: [{% for data in lista_csv %}
+                  [{{ data.data }},{{ data.dir1 }}]
+                   {% if not forloop.last %}, {% endif %}
+                   {% endfor %}],
+            yAxis: 1,
+            type: 'spline',
+            tooltip: {valueDecimals: 2,
+            valueSuffix: ' º'}},{
+            name : 'Intensity',
+            data: [ {% for data in lista_csv %}
+                  [{{ data.data }},{{ data.mag1 }}]
+                  {% if not forloop.last %}, {% endif %}
+                  {% endfor %}],
+          type: 'spline',
+          tooltip: {
+          valueDecimals: 2,
+          valueSuffix: ' mm/s'}}]});
+
+</script>
+</div>
+<div class="jq-tab-content" data-tab="6">
+<div id="graphFixed6">
+</div>
+
+<script>
+
+
+
+Highcharts.stockChart('graphFixed6', {
+title: {text: 'Thermistor String'},
+xAxis: [{type: 'datetime',
+labels: {style: {fontSize: '15px'}}}],
+yAxis: [{labels: {formatter: function() {
+return this.value + ' ºC';},
+style: {fontSize: '15px'}},
+opposite: false,
+title: {text: '',
+style: {fontSize: '15px'}}}, {}],
+series: [{type: 'line',
+name: '10m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+       [{{ x.data }},{{ x.tsbe10 }}]{% if not forloop.last %}, {% endif %}
+        {% endfor %}]},{
+type: 'line',
+name: '20m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe20 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]},{
+type: 'line',
+name: '30m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe30 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]},{
+type: 'line',
+name: '40m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe40 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]
+      },{
+type: 'line',
+name: '50m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe50 }}]{% if not forloop.last %}, {% endif %}
+       {% endfor %}]},{
+type: 'line',
+name: '60m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe60 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]},{
+type: 'line',
+name: '70m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe70 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]},{
+type: 'line',
+name: '80m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe80 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]
+      },{
+type: 'line',
+name: '90m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe90 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]},{
+type: 'line',
+name: '100m',
+tooltip: {valueDecimals: 2,
+valueSuffix: 'ºC'},
+data: [{% for x in lista_csv %}
+      [{{ x.data }},{{ x.tsbe100 }}]{% if not forloop.last %}, {% endif %}
+      {% endfor %}]}]});
+
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}
