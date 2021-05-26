@@ -1,6 +1,0 @@
-2019-02-15T18:39:10.235 +0000 [     33834][       1] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/ HTTP/1.1"
-2019-02-15T18:39:10.292 +0000 [     33891][       1] INFO  - threddsServlet - Request Completed - 302 - -1 - 59
-2019-02-15T18:39:10.475 +0000 [     34074][       2] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/catalog.html HTTP/1.1"
-2019-02-15T18:39:10.511 +0000 [     34110][       2] INFO  - threddsServlet - Request Completed - 200 - 1985 - 37
-2019-02-15T18:40:49.347 +0000 [    132946][       3] INFO  - threddsServlet - Remote host: 201.17.98.143 - Request: "GET /thredds/catalog_pinkdot.html HTTP/1.1"
-2019-02-15T18:40:49.351 +0000 [    132950][       3] INFO  - threddsServlet - Request Completed - 200 - 1471 - 4

@@ -1,4 +1,0 @@
-2019-02-16T01:00:40.275 +0000 [  22923874][       4] INFO  - threddsServlet - Remote host: 187.70.231.95 - Request: "GET /thredds/ HTTP/1.1"
-2019-02-16T01:00:40.382 +0000 [  22923981][       4] INFO  - threddsServlet - Request Completed - 302 - -1 - 107
-2019-02-16T01:00:41.405 +0000 [  22925004][       5] INFO  - threddsServlet - Remote host: 187.70.231.95 - Request: "GET /thredds/catalog.html HTTP/1.1"
-2019-02-16T01:00:41.409 +0000 [  22925008][       5] INFO  - threddsServlet - Request Completed - 200 - 1985 - 4

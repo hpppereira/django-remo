@@ -1,6 +1,0 @@
-2019-02-12T17:05:29.820 +0000 [     11921][       1] INFO  - threddsServlet - Remote host: 146.164.122.34 - Request: "GET /thredds/catalog.html HTTP/1.1"
-2019-02-12T17:05:29.897 +0000 [     11998][       1] INFO  - threddsServlet - Request Completed - 200 - 2516 - 79
-2019-02-12T17:05:30.089 +0000 [     12190][       2] INFO  - threddsServlet - Remote host: 146.164.122.34 - Request: "GET /thredds/logo_remo.png HTTP/1.1"
-2019-02-12T17:05:30.103 +0000 [     12204][       2] INFO  - threddsServlet - Request Completed - 404 - -1 - 14
-2019-02-12T17:05:31.279 +0000 [     13380][       3] INFO  - threddsServlet - Remote host: 146.164.122.34 - Request: "GET /thredds/catalog/testAll/catalog.html HTTP/1.1"
-2019-02-12T17:05:31.283 +0000 [     13384][       3] INFO  - threddsServlet - Request Completed - 404 - -1 - 4
